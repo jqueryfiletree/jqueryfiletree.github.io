@@ -1,0 +1,21 @@
+{
+  "name": "jqueryfiletree-demo",
+  "version": "0.0.1",
+  "homepage": "http://jqueryfiletree.github.io/",
+  "authors": [
+    "Dave Rogers <@daveindigital>"
+  ],
+  "description": "demo page for jQueryFileTree",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jqueryfiletree": "^2.0.4"
+  },
+  "private": true
+}
