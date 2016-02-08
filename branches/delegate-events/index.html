@@ -232,9 +232,7 @@ $('.filetree-events')
 			$('.filetree-basic').fileTree({
 				script: script
 			}, function(file) {
-				console.log(file);
 				// do something with file
-				console.log( $('a[rel="'+file+'"]').text() );
 				$('.selected-file').text( $('.filetree-basic a[rel="'+file+'"]').text() );
 			});
 
@@ -306,7 +304,6 @@ $('.filetree-events')
 			});
 
 			function moveUp() {
-				console.log('move up');
 
 				$('.info-block').map(function(){
 					$(this).after( $(this).parent().find('.filetree-block') );
@@ -314,7 +311,6 @@ $('.filetree-events')
 			}
 
 			function moveDown() {
-				console.log('move down');
 
 				$('.info-block').map(function(){
 					$(this).before( $(this).parent().find('.filetree-block') );
