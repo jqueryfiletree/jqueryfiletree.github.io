@@ -15,7 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "jqueryfiletree": "^2.0.4"
+    "jqueryfiletree": "~2"
   },
   "private": true
 }
