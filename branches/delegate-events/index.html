@@ -27,7 +27,7 @@
 
 	<!-- Favicon
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<link rel="icon" type="image/png" href="images/favicon.png" />
+	<!-- <link rel="icon" type="image/png" href="images/favicon.png" /> -->
 
 </head>
 
@@ -280,14 +280,17 @@ $('.filetree-events')
 				.fileTree({
 				   script: script,
 				})
-				.on('filetreeexpanded filetreecollapsed filetreeclicked', function(e, data) {
+				.on('filetreeinitiated filetreeexpand filetreeexpanded filetreecollapse filetreecollapsed filetreeclicked', function(e, data) {
 					if( $('.events-log div').length >= 5 )
 						$('.events-log div:nth(0)').slideUp('slow', function(){
 							$(this).remove();
 							$('.events-log').append( '<div>'+data.value+' '+e.type.replace('filetree','')+'</div>');
 						});
 					else {
-						$('.events-log').append( '<div>'+data.value+' '+e.type.replace('filetree','')+'</div>');
+						if( e.type == 'filetreeinitiated' )
+							$('.events-log').append( '<div>filetree-events initiated</div>');
+						else
+							$('.events-log').append( '<div>'+data.value+' '+e.type.replace('filetree','')+'</div>');
 					}
 				});
 
